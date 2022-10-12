@@ -1,0 +1,83 @@
+#hero {
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    #overlay {
+        background-color: rgba(var(--black0), 0.2);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        section {
+
+            @include lg {
+                display: flex;
+
+            }
+
+            div {
+                h1 {
+                    color: var(--white);
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 300;
+                    font-size: rem-calc(40);
+
+                    @include md {
+                        font-size: rem-calc(50);
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(50);
+                    }
+
+                }
+
+            }
+
+            aside {
+                @include lg {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 5vw;
+
+                }
+
+                button {
+                    border: none;
+                    background-color: var(--blue);
+                    color: var(--white);
+                    padding: 20px 15px;
+                    font-size: rem-calc(20);
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 600;
+                    margin-top: 24px;
+                    cursor: pointer;
+
+                    @include md {
+                        font-size: rem-calc(23);
+                        padding: 20px;
+
+                    }
+
+                    @include md {
+                        font-size: rem-calc(25);
+                        padding: 30px;
+
+                    }
+
+                    i {
+                        margin-left: 16px;
+                    }
+                }
+
+            }
+
+
+
+        }
+    }
+
+}
