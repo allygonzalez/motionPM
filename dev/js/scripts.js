@@ -72,17 +72,17 @@ function heroAnimation() {
 
 
 
-var MainTL = gsap.timeline();
-MainTL.add(heroAnimation);
+var mainTL = gsap.timeline();
+mainTL.add(heroAnimation);
 
 
 
 
 let exploreBtn = document.querySelector("#explore-btn");
 
-varbuttonTL = gsap.timeline({
+var buttonTL = gsap.timeline({
     paused: true
-});
+})
 buttonTL.to("#explore-btn", {
     duration: 1,
     scale: 2
@@ -94,4 +94,4 @@ exploreBtn.addEventListener("mouseover", function () {
 
 exploreBtn.addEventListener("mouseout", function () {
     buttonTL.reverse();
-})
+});
