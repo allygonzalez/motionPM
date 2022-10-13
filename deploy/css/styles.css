@@ -383,6 +383,9 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+#hero #overlay section {
+  padding: 16px;
+}
 @media (min-width: 1024px) {
   #hero #overlay section {
     display: flex;
@@ -392,16 +395,19 @@ textarea {
   color: var(--white);
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 3.125rem;
+  line-height: 2.25rem;
 }
 @media (min-width: 768px) {
   #hero #overlay section div h1 {
     font-size: 3.125rem;
+    line-height: 2.875rem;
   }
 }
 @media (min-width: 1024px) {
   #hero #overlay section div h1 {
     font-size: 3.125rem;
+    line-height: 3.5rem;
   }
 }
 @media (min-width: 1024px) {

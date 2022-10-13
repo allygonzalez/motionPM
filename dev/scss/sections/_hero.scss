@@ -12,6 +12,7 @@
         align-items: center;
 
         section {
+            padding: 16px;
 
             @include lg {
                 display: flex;
@@ -23,14 +24,17 @@
                     color: var(--white);
                     font-family: 'Raleway', sans-serif;
                     font-weight: 300;
-                    font-size: rem-calc(40);
+                    font-size: rem-calc(50);
+                    line-height: rem-calc(36);
 
                     @include md {
                         font-size: rem-calc(50);
+                        line-height: rem-calc(46);
                     }
 
                     @include lg {
                         font-size: rem-calc(50);
+                        line-height: rem-calc(56);
                     }
 
                 }

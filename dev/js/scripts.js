@@ -7,24 +7,63 @@ import {
 
 function heroAnimation() {
     var tl = gsap.timeline();
-    tl.from("#line-1", {
-            duration: .5,
-            x: -200,
-            alpha: 0
 
-        })
-        .from("#line-2", {
-            duration: .5,
-            x: -100,
-            alpha: 0,
+    let mm = gsap.matchMedia();
 
-        }, "-=0.25")
-        .from("#explore-btn", {
-            duration: .5,
-            x: 200,
-            alpha: 0,
+    mm.add("(min-width: 768px)", () => {
+        // desktop setup code here...
+        tl.from("#line-1", {
+                duration: .5,
+                x: -200,
+                alpha: 0
 
-        }, "-=0.25")
+            })
+            .from("#line-2", {
+                duration: .5,
+                x: -100,
+                alpha: 0,
+
+            }, "-=0.25")
+            .from("#explore-btn", {
+                duration: .5,
+                x: 200,
+                alpha: 0,
+
+            }, "-=0.25")
+    });
+
+    mm.add("(max-width: 767px)", () => {
+        // mobile setup code here...
+        tl.from("#line-1", {
+                duration: .5,
+                y: -200,
+                alpha: 0
+
+            })
+            .from("#line-2", {
+                duration: .5,
+                y: -100,
+                alpha: 0,
+
+            }, "-=0.25")
+            .from("#explore-btn", {
+                duration: .5,
+                y: 200,
+                alpha: 0,
+
+            }, "-=0.25")
+    });
+
+
+
+
+
+
+
+
+
+
+
 
     return tl;
 
