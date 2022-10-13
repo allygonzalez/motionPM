@@ -2,36 +2,57 @@ import {
     gsap
 } from "gsap";
 
-gsap.from("#line-1", {
-    duration: 1,
-    x: -200,
-    alpha: 0
-})
-gsap.from("#line-2", {
-    duration: 1,
-    x: -100,
-    alpha: 0,
-    delay: 0.15
-})
-gsap.from("#explore-btn", {
-    duration: 1,
-    x: 200,
-    alpha: 0,
-    delay: 1
-})
+
+
+
+function heroAnimation() {
+    var tl = gsap.timeline();
+    tl.from("#line-1", {
+            duration: .5,
+            x: -200,
+            alpha: 0
+
+        })
+        .from("#line-2", {
+            duration: .5,
+            x: -100,
+            alpha: 0,
+
+        }, "-=0.25")
+        .from("#explore-btn", {
+            duration: .5,
+            x: 200,
+            alpha: 0,
+
+        }, "-=0.25")
+
+    return tl;
+
+}
+
+
+
+
+var MainTL = gsap.timeline();
+MainTL.add(heroAnimation);
+
+
+
 
 let exploreBtn = document.querySelector("#explore-btn");
 
+varbuttonTL = gsap.timeline({
+    paused: true
+});
+buttonTL.to("#explore-btn", {
+    duration: 1,
+    scale: 2
+});
+
 exploreBtn.addEventListener("mouseover", function () {
-    gsap.to("#explore-btn", {
-        duration: 1,
-        scale: 2
-    });
+    buttonTL.play();
 })
 
 exploreBtn.addEventListener("mouseout", function () {
-    gsap.to("#explore-btn", {
-        duration: 1,
-        scale: 1
-    });
+    buttonTL.reverse();
 })
