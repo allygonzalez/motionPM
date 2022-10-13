@@ -85,7 +85,7 @@ var buttonTL = gsap.timeline({
 })
 buttonTL.to("#explore-btn", {
     duration: 1,
-    scale: 2
+    scale: 1.3
 });
 
 exploreBtn.addEventListener("mouseover", function () {
