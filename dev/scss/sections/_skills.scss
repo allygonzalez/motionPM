@@ -1,26 +1,26 @@
 /* =============
     Skills
 ============= */
-#skills{
+#skills {
 
-    @include xl{
+    @include xl {
         display: grid;
-            grid-template-columns: auto 1200px auto;
-            grid-template-areas: ". skills-container .";
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". skills-container .";
     }
 
-    
-    >div{
 
-        @include lg{
+    >div {
+
+        @include lg {
             display: grid;
             grid-template-columns: 40% auto;
         }
 
-        @include xl{
+        @include xl {
             grid-area: skills-container;
         }
-    
+
         aside {
             background-image: url('../img/skills/robot.jpg');
             background-position: center;
@@ -35,13 +35,13 @@
                 height: auto;
             }
         }
-    
-        #skills-content{
+
+        #skills-content {
             background-color: $charcoal;
             color: $white;
             display: grid;
             grid-template-columns: 16px auto 16px;
-            grid-template-areas: ". skills .";  
+            grid-template-areas: ". skills .";
             padding: 60px 0;
 
             grid-template-columns: 10px auto 10px;
@@ -54,9 +54,9 @@
             @include lg {
                 padding: 25px 0 44px;
             }
-    
-            
-            >div{
+
+
+            >div {
                 grid-area: skills;
                 // border: 1px solid red;
 
@@ -135,5 +135,5 @@
         }
     }
 
-    
+
 }
