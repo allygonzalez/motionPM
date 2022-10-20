@@ -1,6 +1,17 @@
 import {
     gsap
 } from "gsap";
+import {
+    ScrollTrigger
+} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#pic1", {
+    duration: 1,
+    x: 400,
+    rotation: 360
+})
 
 
 
