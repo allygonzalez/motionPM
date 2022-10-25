@@ -443,3 +443,103 @@ textarea {
 #hero #overlay section aside button i {
   margin-left: 16px;
 }
+
+#history {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". history .";
+  margin: 24px 0;
+}
+@media (min-width: 768px) {
+  #history {
+    grid-template-columns: auto 90vw auto;
+    margin: 48px 0;
+  }
+}
+@media (min-width: 1024px) {
+  #history {
+    grid-template-columns: auto 80vw auto;
+    margin: 64px 0;
+  }
+}
+@media (min-width: 1440px) {
+  #history {
+    grid-template-columns: auto 1440px auto;
+  }
+}
+#history > div {
+  grid-area: history;
+}
+@media (min-width: 768px) {
+  #history > div {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+}
+#history > div section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+#history > div section h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 3.125rem;
+}
+#history > div section p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+#history > div aside {
+  height: 100vh;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #history > div aside {
+    height: 70vh;
+  }
+}
+#history > div aside div {
+  background-image: url("../img/pic1.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+#about {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #about {
+    height: 80vh;
+  }
+}
+@media (min-width: 1024px) {
+  #about {
+    height: 70vh;
+  }
+}
+#about > div {
+  text-align: center;
+  color: var(--white);
+}
+#about > div h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+}
+#about #bg-img {
+  background-image: url("../img/pic2.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
