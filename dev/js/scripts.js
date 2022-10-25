@@ -15,55 +15,42 @@ gsap.set("#hero h1 span", {
 function heroAnimation() {
     var tl = gsap.timeline();
 
-    let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 768px)", () => {
-        // desktop setup code here...
-        tl.from("#line-1", {
-                duration: .5,
-                x: -200,
-                alpha: 0
 
-            })
-            .from("#line-2", {
-                duration: .5,
-                x: -100,
-                alpha: 0,
+    tl.from("#line-1", {
+            duration: .5,
+            x: -200,
+            alpha: 0
 
-            }, "-=0.25")
-            .from("#explore-btn", {
-                duration: .5,
-                x: 200,
-                alpha: 0,
+        })
+        .from("#line-2", {
+            duration: .5,
+            x: -100,
+            alpha: 0,
 
-            }, "-=0.25")
-    });
+        }, "-=0.25")
+        .from("#explore-btn", {
+            duration: .5,
+            x: 200,
+            alpha: 0,
 
-    mm.add("(max-width: 767px)", () => {
-        // mobile setup code here...
-        tl.from("#line-1", {
-                duration: .5,
-                y: -200,
-                alpha: 0
+        }, "-=0.25")
+        .from("#explore-btn i", {
+            duration: .5,
+            rotation: 90,
+            alpha: 0,
+            transformOrigin: "left bottom"
+        }, "-=0.5");
 
-            })
-            .from("#line-2", {
-                duration: .5,
-                y: -100,
-                alpha: 0,
-
-            }, "-=0.25")
-            .from("#explore-btn", {
-                duration: .5,
-                y: 200,
-                alpha: 0,
-
-            }, "-=0.25")
-    });
 
     return tl;
+};
 
-}
+
+
+
+
+
 
 let exploreBtn = document.querySelector("#explore-btn");
 
@@ -129,7 +116,7 @@ function wonderAnimation() {
             start: "top 80%"
         }
     });
-    tl.from("bg-img", {
+    tl.from("#bg-img", {
             duration: 5,
             clipPath: "inset(0 50%)"
         })
