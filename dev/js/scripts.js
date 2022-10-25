@@ -7,6 +7,10 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.set("#hero h1 span", {
+    alpha: 0.25
+})
+
 
 function heroAnimation() {
     var tl = gsap.timeline();
