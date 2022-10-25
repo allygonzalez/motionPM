@@ -508,7 +508,7 @@ textarea {
   height: 100%;
 }
 
-#about {
+#hero-2 {
   height: 90vh;
   display: flex;
   align-items: center;
@@ -516,25 +516,25 @@ textarea {
   position: relative;
 }
 @media (min-width: 768px) {
-  #about {
+  #hero-2 {
     height: 80vh;
   }
 }
 @media (min-width: 1024px) {
-  #about {
+  #hero-2 {
     height: 70vh;
   }
 }
-#about > div {
+#hero-2 > div {
   text-align: center;
   color: var(--white);
 }
-#about > div h1 {
+#hero-2 > div h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 5rem;
 }
-#about #bg-img {
+#hero-2 #bg-img {
   background-image: url("../img/pic2.jpeg");
   background-size: cover;
   background-position: bottom;

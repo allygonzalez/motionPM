@@ -7,14 +7,6 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("#pic1", {
-    duration: 1,
-    x: 400,
-    rotation: 360
-})
-
-
-
 
 function heroAnimation() {
     var tl = gsap.timeline();
@@ -65,29 +57,9 @@ function heroAnimation() {
             }, "-=0.25")
     });
 
-
-
-
-
-
-
-
-
-
-
-
     return tl;
 
 }
-
-
-
-
-var mainTL = gsap.timeline();
-mainTL.add(heroAnimation);
-
-
-
 
 let exploreBtn = document.querySelector("#explore-btn");
 
@@ -106,3 +78,68 @@ exploreBtn.addEventListener("mouseover", function () {
 exploreBtn.addEventListener("mouseout", function () {
     buttonTL.reverse();
 });
+
+
+
+
+
+
+
+
+
+
+function historyAnimation() {
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#history",
+            scrub: true,
+            markers: false,
+            end: "top 30%"
+        }
+    });
+    tl.from("#history aside div", {
+            duration: 1,
+            scale: 3,
+            alpha: 0
+        }, "starthistory")
+        .from("#history h1", {
+            duration: 1,
+            x: "-=200%",
+            alpha: 0
+        }, "starthistory")
+        .from("#history p", {
+            duration: 1,
+            x: "-=100%",
+            alpha: 0
+        }, "starthistory")
+    return tl;
+}
+
+function wonderAnimation() {
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#hero-2",
+            scrub: true,
+            markers: true,
+            end: "top 40%",
+            start: "top 80%"
+        }
+    });
+    tl.from("bg-img", {
+            duration: 5,
+            clipPath: "inset(0 50%)"
+        })
+        .from("#hero-2 h1", {
+            duration: 1,
+            scale: 3,
+            alpha: 0
+        }, "-=50%")
+    return tl;
+}
+
+
+
+var mainTimeline = gsap.timeline();
+mainTimeline.add(heroAnimation())
+    .add(historyAnimation())
+    .add(wonderAnimation());

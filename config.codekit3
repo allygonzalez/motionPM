@@ -91,20 +91,12 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/dev\/content\/about.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/content\/about.html",
-      "oF" : 0
-    },
-    "\/dev\/content\/about.kit" : {
+    "\/dev\/content\/hero-2.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/content\/about.html",
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/hero-2.html",
       "oF" : 0
     },
     "\/dev\/content\/hero.kit" : {
@@ -367,7 +359,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_about.scss" : {
+    "\/dev\/scss\/sections\/_hero-2.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -376,7 +368,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_about.css",
+      "oAP" : "\/dev\/scss\/sections\/_hero-2.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
