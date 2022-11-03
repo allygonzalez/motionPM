@@ -1,0 +1,7 @@
+<svg width="612" height="792" viewBox="0 0 612 792" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="star 1">
+<path id="bigstar" d="M306 259.28L332.49 312.95L391.72 321.56L348.86 363.34L358.98 422.33L306 394.48L253.02 422.33L263.14 363.34L220.28 321.56L279.51 312.95L306 259.28Z" stroke="black" stroke-width="3.0217" stroke-miterlimit="10"/>
+<path id="smallstar" d="M306 295.17L322.11 327.82L358.14 333.05L332.07 358.46L338.23 394.35L306 377.41L273.77 394.35L279.93 358.46L253.86 333.05L289.89 327.82L306 295.17Z" stroke="black" stroke-width="1.8381" stroke-miterlimit="10"/>
+<path id="tinystar" d="M306 316L315.578 335.423L337 338.534L321.5 353.65L325.162 375L306 364.923L286.838 375L290.5 353.65L275 338.534L296.422 335.423L306 316Z" stroke="black" stroke-width="1.8381" stroke-miterlimit="10"/>
+</g>
+</svg>
