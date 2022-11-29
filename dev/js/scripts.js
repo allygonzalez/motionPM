@@ -11,33 +11,31 @@ import {
         MotionPathPlugin
 } from "gsap/MotionPathPlugin";
 
+
 gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin);
 
 
-function logoAnimation() {
-        var tl = gsap.timeline();
-        tl.fromTo("#logopath", {
-                        drawSVG: "5% 5%"
-                }, {
-                        duration: 1,
-                        fill: "black",
-                        drawSVG: "100%"
-                })
-                .from("#line", {
-                        duration: 1,
-                        drawSVG: "0%"
-
-
-                });
-
-        return tl;
+gsap.to("#tealoop", {
+        duration: 5,
+        repeat: 12,
+        repeatDelay: 3,
+        yoyo: true,
+        ease: "power1.inOut",
+        motionPath: {
+                path: "#logopath",
+                align: "#logopath",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5]
+        }
+});
 
 
 
-}
+
+
 
 var mainTL = gsap.timeline();
-mainTL.add(logoAnimation())
+mainTL.add(logoAnimation());
 
 
 
