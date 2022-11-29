@@ -18,22 +18,22 @@ gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin);
 
 function tealoopAnimation() {
         var tl = gsap.timeline();
-        tl.to("#tealoop", {
+        gsap.to("#tealoop"), {
                 duration: 5,
                 repeat: 12,
                 repeatDelay: 3,
                 yoyo: true,
                 ease: "power1.inOut",
-                motionPath: {
-                        path: "#logopath",
-                        align: "#logopath",
-                        autoRotate: true,
-                        alignOrigin: [0.5, 0.5]
-                }
+                motionPath: "#logopath",
+                align: "#logopath",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5]
+        }
 
-        })
+
         return tl;
 }
+
 
 
 
