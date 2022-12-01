@@ -24,13 +24,13 @@ function tealoopAnimation() {
   return tl;
 }
 
-function wAnimation() {
+function bluegradientAnimation() {
         var tl = gsap.timeline();
-        tl.fromTo("#w", 
+        tl.fromTo("#bluegradient", 
        {drawSVG: "0% 0%"},
         
         {
-                duration: 1,
+                duration: .3,
                 fill: "none",
                 drawSVG: "100%"
             })
@@ -45,6 +45,83 @@ function wAnimation() {
 
 
 }
+
+
+function pinkgradientAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#pinkgradient", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: .3,
+                fill: "none",
+                drawSVG: "-100%"
+            })
+       
+        return tl;
+
+        
+
+}
+
+function orangegradientAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#orangegradient", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: .3,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+        
+}
+
+
+
+function wAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#w", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: 1,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+
+}
+gsap.to(".w", {
+        duration: 1,
+        scale: 0.1,
+        x: 40,
+        ease: "power1.inOut",
+        stagger: {
+          grid: [7,15],
+          from: "end",
+          axis: "x",
+          ease: "power3.inOut",
+          amount: 1.5
+        }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
 function aAnimation() {
         var tl = gsap.timeline();
         tl.fromTo("#a", 
@@ -111,7 +188,7 @@ function p_2Animation() {
 
         function lAnimation() {
                 var tl = gsap.timeline();
-                tl.fromTo("#p_2", 
+                tl.fromTo("#l", 
                {drawSVG: "0% 0%"},
                 
                 {
@@ -176,6 +253,9 @@ function p_2Animation() {
 
 var mainTL = gsap.timeline();
 mainTL.add(tealoopAnimation())
+.add(bluegradientAnimation())
+.add(pinkgradientAnimation())
+.add(orangegradientAnimation())
 .add(wAnimation(),"do")
 .add(aAnimation(),"do")
 .add(pAnimation(),"do")
