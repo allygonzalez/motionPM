@@ -10,13 +10,13 @@ function tealoopAnimation() {
   tl.to("#tealoop",
     {
       duration: 2,
-      repeat: 1,
+      repeat: 0,
       repeatDelay: 2,
       ease: "power1.inOut",
       motionPath:{
         path: "#logopath",
         align: "#logopath",
-        autoRotate: -70,
+        autoRotate: -75,
         alignOrigin: [0.5, 0.5]
 }
     });
@@ -27,15 +27,17 @@ function tealoopAnimation() {
 function wAnimation() {
         var tl = gsap.timeline();
         tl.fromTo("#w", 
-       {drawSVG: "0 5%"},
+       {drawSVG: "0% 0%"},
         
         {
                 duration: 1,
-                fill: "purple",
+                fill: "none",
                 drawSVG: "100%"
             })
        
         return tl;
+
+        
 
 
 
@@ -43,10 +45,147 @@ function wAnimation() {
 
 
 }
+function aAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#a", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: 1,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+        
+
+
+
+
+
+
+}
+function pAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#p", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: 1,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+        
+
+
+
+
+
+
+}
+function p_2Animation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#p_2", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: 1,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+        
+
+
+
+
+
+
+        }
+
+        function lAnimation() {
+                var tl = gsap.timeline();
+                tl.fromTo("#p_2", 
+               {drawSVG: "0% 0%"},
+                
+                {
+                        duration: 1,
+                        fill: "none",
+                        drawSVG: "100%"
+                    })
+               
+                return tl;
+        
+                
+        
+        
+        
+        
+        
+                }
+                function eAnimation() {
+                        var tl = gsap.timeline();
+                        tl.fromTo("#e", 
+                       {drawSVG: "0% 0%"},
+                        
+                        {
+                                duration: 1,
+                                fill: "none",
+                                drawSVG: "100%"
+                            })
+                       
+                        return tl;
+                
+                        
+                
+                
+                
+                
+                
+                        }
+                        function rAnimation() {
+                                var tl = gsap.timeline();
+                                tl.fromTo("#r", 
+                               {drawSVG: "0% 0%"},
+                                
+                                {
+                                        duration: 1,
+                                        fill: "none",
+                                        drawSVG: "100%"
+                                    })
+                               
+                                return tl;
+                        
+                                
+                        
+                        
+                        
+                        
+                        
+                                }
+                
+        
+
 
 
 var mainTL = gsap.timeline();
 mainTL.add(tealoopAnimation())
-.add(wAnimation());
+.add(wAnimation(),"do")
+.add(aAnimation(),"do")
+.add(pAnimation(),"do")
+.add(p_2Animation(),"do")
+.add(lAnimation(),"do")
+.add(eAnimation(),"do")
+.add(rAnimation(),"do")
+
+
+
+
 
 GSDevTools.create();
