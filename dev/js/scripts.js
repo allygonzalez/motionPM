@@ -80,6 +80,38 @@ function orangegradientAnimation() {
         
 }
 
+let tl= gsap.timeline();
+tl.from("#w", {
+autoAlpha: 0,
+x: "200%",
+stagger: 0.5,
+ease: "expo.out"
+}
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function wAnimation() {
@@ -91,25 +123,14 @@ function wAnimation() {
                 duration: 1,
                 fill: "none",
                 drawSVG: "100%"
+               
             })
        
         return tl;
 
 
 }
-gsap.to(".w", {
-        duration: 1,
-        scale: 0.1,
-        x: 40,
-        ease: "power1.inOut",
-        stagger: {
-          grid: [7,15],
-          from: "end",
-          axis: "x",
-          ease: "power3.inOut",
-          amount: 1.5
-        }
-      });
+
 
 
 
