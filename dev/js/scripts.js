@@ -29,7 +29,7 @@ function olineAnimation() {
         var tl = gsap.timeline();
         tl.to("#P",
           {
-            duration: 3,
+            duration: 4,
             repeat: 0,
             repeatDelay: 2,
             ease: "power1.inOut",
