@@ -9,7 +9,7 @@ function olineAnimation() {
         var tl = gsap.timeline();
         tl.to("#o",
           {
-            duration: 2,
+            duration: 3,
             repeat: 0,
             repeatDelay: 2,
             ease: "power1.inOut",
@@ -27,16 +27,15 @@ function olineAnimation() {
 
       function plineAnimation() {
         var tl = gsap.timeline();
-        tl.to("#p",
+        tl.to("#P",
           {
-            duration: 2,
+            duration: 3,
             repeat: 0,
             repeatDelay: 2,
             ease: "power1.inOut",
             motionPath:{
               path: "#pline",
               align: "#pline",
-              autoRotate: true,
               alignOrigin: [0.5, 0.5]
       }
           });
@@ -45,7 +44,34 @@ function olineAnimation() {
       }
 
 
-      
+      function smileAnimation() {
+        var tl = gsap.timeline();
+        tl.fromTo("#smile", 
+       {drawSVG: "0% 0%"},
+        
+        {
+                duration: 1.5,
+                fill: "none",
+                drawSVG: "100%"
+            })
+       
+        return tl;
+
+        
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
       
       
       
@@ -53,3 +79,4 @@ function olineAnimation() {
       var mainTL = gsap.timeline();
 mainTL.add(olineAnimation(),"do")
 .add(plineAnimation(),"do")
+.add(smileAnimation())
