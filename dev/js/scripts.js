@@ -96,12 +96,14 @@ function wAnimation() {
                 duration: 1,
                 fill: "none",
                 drawSVG: "100%"
+                
             })
        
         return tl;
 
 
 }
+
 
 
 
